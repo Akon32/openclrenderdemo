@@ -98,10 +98,10 @@ class MainFrame extends JFrame("OpenCL Render Demo") {
   }
 
   private val pointsArray = Array[Point2D](
-    new Point2D.Double(100, 100),
-    new Point2D.Double(200, 100),
-    new Point2D.Double(200, 200),
-    new Point2D.Double(100, 200))
+    new Point2D.Double(454, 530),
+    new Point2D.Double(651, 528),
+    new Point2D.Double(703, 635),
+    new Point2D.Double(409, 634))
   private var pointIndex = 0
 
   def updatePerspective(): Unit = {
@@ -114,6 +114,7 @@ class MainFrame extends JFrame("OpenCL Render Demo") {
       pointsArray(1).getX, pointsArray(1).getY,
       pointsArray(2).getX, pointsArray(2).getY,
       pointsArray(3).getX, pointsArray(3).getY))
+    // println(pointsArray mkString ";")
   }
 
   def pointClicked(p: Point) = {
@@ -183,6 +184,8 @@ class MainFrame extends JFrame("OpenCL Render Demo") {
     imagePanel.addMouseWheelListener(mouseListener)
     imagePanel.addMouseListener(mouseListener)
     imagePanel.addMouseMotionListener(mouseListener)
+    viewTransform1.scale(0.8, 0.8)
+    updatePerspective()
     pack()
   }
 
