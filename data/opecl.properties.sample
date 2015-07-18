@@ -1,0 +1,3 @@
+# Specify OpenCL platform and device in file "data/opencl.properties"
+opencl.platformindex=0
+opencl.deviceindex=0
